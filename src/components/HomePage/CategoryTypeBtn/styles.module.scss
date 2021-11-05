@@ -1,0 +1,14 @@
+.category__type_btn {
+  background-color: #f2f4ff;
+  border-radius: 100px;
+  height: 52px;
+  width: auto;
+  border: none;
+  padding: 0px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: #19063d;
+    color: white;
+  }
+}

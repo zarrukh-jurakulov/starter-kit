@@ -1,0 +1,29 @@
+.catalog__sidebar {
+  .dropdown__container {
+    margin-top: 40px;
+    width: auto;
+    .dropdown__header {
+      background: none;
+      font-weight: 700;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      color: #0f1530;
+    }
+
+    .menu__items {
+      & > p {
+        text-align: left;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 14px;
+        cursor: pointer;
+        color: #0f153080;
+        margin: 14px ceil($number: 10%);
+      }
+      & > p:hover {
+        color: #7733fe;
+      }
+    }
+  }
+}

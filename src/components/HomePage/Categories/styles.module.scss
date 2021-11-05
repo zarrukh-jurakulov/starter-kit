@@ -1,0 +1,29 @@
+.category__item {
+  width: 185px;
+  height: 185px;
+  background-color: #f2f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: transform 0.3s;
+
+  &:hover {
+    background-color: #19063d;
+    color: white;
+    box-shadow: 0px 6px 20px rgba(0, 60, 98, 0.1);
+    transform: scale(1.1);
+  }
+
+  .categoryIcon {
+    padding: 35px 74px;
+  }
+
+  & > p {
+    padding: 0px 58px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

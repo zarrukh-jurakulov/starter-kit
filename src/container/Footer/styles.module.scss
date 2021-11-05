@@ -1,0 +1,120 @@
+.footer {
+  margin-top: 80px;
+  background-color: #0f1530;
+
+  .content {
+    color: white;
+    padding: 0 120px;
+
+    .main {
+      padding: 90px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+      border-bottom: 1px solid lightgrey;
+
+      .additional {
+        & > span {
+          color: #ee43b4;
+          font-size: 20px;
+        }
+        & > div {
+          margin-top: 2 0px;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        & > div > p {
+          font-size: 16px;
+          margin-top: 10px;
+        }
+      }
+
+      .personal__cabinet {
+        & > span {
+          color: #ee43b4;
+          font-size: 20px;
+        }
+        & > div {
+          margin-top: 20px;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        & > div > p {
+          font-size: 16px;
+          margin-top: 10px;
+        }
+      }
+
+      .social {
+        display: flex;
+
+        justify-content: center;
+        flex-direction: column;
+        & > p {
+          font-size: 16px;
+          color: white;
+        }
+
+        .send__email {
+          margin-top: 30px;
+
+          & > form > input {
+            width: 225px;
+            height: 50px;
+            padding: 0px 20px;
+            border-radius: 500px;
+            border: none;
+          }
+
+          & > form > button {
+            width: 155px;
+            height: 50px;
+            border-radius: 500px;
+            color: #7733fe;
+            font-size: 14px;
+            font-weight: 800;
+            margin-left: 10px;
+            border: none;
+            cursor: pointer;
+          }
+        }
+        .social__websites {
+          margin-top: 35px;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+
+          & > .icons {
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 40px 120px;
+    color: white;
+
+    .contact__items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > p {
+        margin-left: 10px;
+      }
+    }
+  }
+}

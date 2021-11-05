@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Бесплатная доставка",
+    "icon": "delivery",
+    "styles": {
+      "bgGradient": {
+        "primary": "#E6A10A",
+        "secondary": "#FCBE38"
+      },
+      "fontSize": "24px"
+    }
+  },
+  {
+    "name": "Минимальная сумма заказа",
+    "icon": "valentine",
+    "styles": {
+      "bgColor": "#B25EFF",
+      "fontSize": "16px"
+    }
+  },
+  {
+    "name": "Наши магазины",
+    "icon": "delivery",
+    "styles": { "bgColor": "#FF8500", "fontSize": "24px" }
+  }
+]

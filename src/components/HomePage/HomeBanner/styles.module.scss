@@ -1,0 +1,20 @@
+.home__banner_mini {
+  width: 387px;
+  // height: 135px;
+  background-color: #e6a10a;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 20px;
+
+  text-align: center;
+  & > p {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+  }
+  .delivery__enter__icon {
+    margin-bottom: 52px;
+  }
+}
