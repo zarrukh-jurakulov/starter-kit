@@ -1,6 +1,9 @@
 import React, { useState, ComponentType } from "react";
-import classes from "./styles.module.scss";
 import { BuyIcon, HeartIcon, HeartPinkIcon } from "../../assets/icons";
+import { NavLink as Link } from "react-router-dom";
+import { Card, CardMedia, Container, Typography } from "@mui/material";
+import { useStyles } from "./styles";
+import { Box } from "@mui/system";
 
 interface ProductCardProps {
   id: number;
@@ -16,26 +19,46 @@ const ProductCard: ComponentType<ProductCardProps> = ({
   price,
 }) => {
   const [isFavourite, setIsFavourite] = useState<boolean>(false);
+  const classes = useStyles();
   return (
-    <div className={classes.product__card}>
-      <div className={classes.img__container}>
-        <img src={image} alt='product__image' />
-        <div onClick={() => setIsFavourite(!isFavourite)}>
+    <Card
+      className={classes.product__card}
+      sx={{ maxWidth: 285, boxShadow: 0 }}
+      key={id}>
+      <div className={classes.imgContainer}>
+        <Link to='/product-details'>
+          <CardMedia
+            component='img'
+            alt='product_image'
+            width='285'
+            height='285'
+            image={image}
+          />
+        </Link>
+        <div onClick={() => setIsFavourite((isFavourite) => !isFavourite)}>
           {isFavourite ? (
-            <HeartPinkIcon className={classes.heart__icon} />
+            <HeartPinkIcon className={classes.heartIcon} />
           ) : (
-            <HeartIcon className={classes.heart__icon} />
+            <HeartIcon className={classes.heartIcon} />
           )}
         </div>
       </div>
-      <header className={classes.product__name}>{name}</header>
-      <div className={classes.price__container}>
-        <div className={classes.price}>{price} sum</div>
+      <Typography className={classes.productName}>{name}</Typography>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}>
+        <Typography variant='body2' className={classes.price}>
+          {price} sum
+        </Typography>
         <div className={classes.icon__container}>
-          <BuyIcon />
+          <BuyIcon fill='white' />
         </div>
-      </div>
-    </div>
+      </Box>
+    </Card>
   );
 };
 

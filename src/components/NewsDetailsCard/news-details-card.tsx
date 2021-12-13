@@ -1,6 +1,8 @@
-import React, { ComponentType } from "react";
+import { ComponentType } from "react";
 import { LikeIcon, ShareIcon } from "../../assets/icons";
-import classes from "./styles.module.scss";
+import { useStyles } from "./styles";
+import { Box } from "@mui/system";
+import { CardMedia, Container, Typography } from "@mui/material";
 
 interface NewsDetailsProps {
   id: number;
@@ -15,30 +17,44 @@ const NewsDetailsCard: ComponentType<NewsDetailsProps> = ({
   header,
   summary,
 }) => {
+  const classes = useStyles();
   return (
-    <div className={classes.news__details__card} key={id}>
-      <div className={classes.img__container}>
-        <img src={image} alt='' />
-      </div>
+    <Box className={classes.newsDetailsCard} key={id}>
+      <CardMedia
+        component='img'
+        alt='product_image'
+        image={image}
+        className={classes.imgContainer}
+      />
+
       <div className={classes.content}>
-        <header>{header}</header>
-        <summary>{summary}</summary>
+        <Typography variant='h3' className={classes.header}>
+          {header}
+        </Typography>
+        <Container sx={{ marginTop: "30px" }} />
+        <Typography variant='h6' className={classes.summary}>
+          {summary}
+        </Typography>
         <div className={classes.icons}>
           <div className={classes.likes}>
-            <div className={classes.icon__background}>
+            <div className={classes.iconBackground}>
               <LikeIcon />
             </div>
-            <p>Likes (6)</p>
+            <Typography variant='h6' className={classes.iconContent}>
+              Likes (6)
+            </Typography>
           </div>
           <div className={classes.shares}>
-            <div className={classes.icon__background}>
+            <div className={classes.iconBackground}>
               <ShareIcon />
             </div>
-            <p>Поделиться</p>
+            <Typography variant='h6' className={classes.iconContent}>
+              Поделиться
+            </Typography>
           </div>
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
 

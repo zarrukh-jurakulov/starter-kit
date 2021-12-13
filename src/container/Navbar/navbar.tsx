@@ -11,19 +11,23 @@ import {
   TelegramIcon,
 } from "../../assets/icons";
 import classes from "./styles.module.scss";
+import { Container } from "@mui/material";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className={classes.navbar}>
       {/* Top navbar */}
-      <nav className={classes.nav__container}>
+      {/* <Section> */}
+
+      {/* </Section> */}
+      <Container className={classes.nav__container}>
         <Link to='/'>Личный Кадинет</Link>
         <Link to='/'>Закладки</Link>
         <Link to='/'>Сравнение товаров</Link>
         <Link to='/'>Корзина</Link>
         <Link to='/'>Оплата и доставка</Link>
         <Link to='/'>Отзывы о магазине</Link>
-      </nav>
+      </Container>
       {/* Header */}
       <header className={classes.header__container}>
         <div
@@ -65,10 +69,12 @@ const Navbar = () => {
               <HeartIcon />
             </div>
           </Link>
-          <div className={classes.icon__container}>
-            <BuyIcon />
-            <div className={classes.amount__prod__on__icon}>6</div>
-          </div>
+          <Link to='/bucket'>
+            <div className={classes.icon__container}>
+              <BuyIcon />
+              <div className={classes.amount__prod__on__icon}>6</div>
+            </div>
+          </Link>
           <div className={classes.header__checkout__total}>
             <p>175 000 сум</p>
             <p>6 товаров</p>

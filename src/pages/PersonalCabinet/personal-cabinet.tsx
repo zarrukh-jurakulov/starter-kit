@@ -1,9 +1,10 @@
+import { Typography } from "@mui/material";
 import React from "react";
 
 const PersonalCabinet = () => {
   return (
     <div>
-      <h1>Personal kabinet</h1>
+      <Typography variant='h3'>Personal kabinet</Typography>
     </div>
   );
 };

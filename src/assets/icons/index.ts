@@ -31,6 +31,9 @@ import { ReactComponent as ShareIcon } from "./share.svg";
 import { ReactComponent as LikeIcon } from "./like.svg";
 import { ReactComponent as HeartWithBackIcon } from "./heart-with-back.svg";
 import { ReactComponent as HeartPinkIcon } from "./heart-pink.svg";
+import { ReactComponent as PlusIcon } from "./plus.svg";
+import { ReactComponent as MinusIcon } from "./minus.svg";
+import { ReactComponent as DeleteIcon } from "./delete.svg";
 
 export {
   ValentineIcon,
@@ -66,4 +69,7 @@ export {
   LikeIcon,
   HeartWithBackIcon,
   HeartPinkIcon,
+  PlusIcon,
+  MinusIcon,
+  DeleteIcon,
 };

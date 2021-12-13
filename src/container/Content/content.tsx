@@ -7,6 +7,9 @@ import CatalogProducts from "../../pages/CatalogProducts/catalog-products";
 import News from "../../pages/News/news";
 import NewsDetails from "../../pages/NewsDetails/news-details";
 import Favourites from "../../pages/Favourites/favourites";
+import ProductDetails from "../../pages/ProductDetails/product-details";
+import Bucket from "../../pages/Bucket/bucket";
+import Section from "../../components/Section/section";
 
 const Content = () => {
   return (
@@ -18,6 +21,8 @@ const Content = () => {
         <Route path='/news' component={News} />
         <Route path='/news-details' component={NewsDetails} />
         <Route path='/favourites' component={Favourites} />
+        <Route path='/product-details' component={ProductDetails} />
+        <Route path='/bucket' component={Bucket} />
       </Switch>
     </div>
   );

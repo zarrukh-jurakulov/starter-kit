@@ -1,0 +1,16 @@
+.button {
+  color: #7733fe;
+  background-color: #7733fe1a;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 35px;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: #7733fe;
+    color: #fff;
+  }
+}

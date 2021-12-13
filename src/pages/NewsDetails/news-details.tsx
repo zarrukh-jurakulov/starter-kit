@@ -1,25 +1,27 @@
-import React from "react";
-import classes from "./styles.module.scss";
 import newsDetailsCardData from "../../data/news-details.json";
 import newsDetails from "../../assets/images/news-details.png";
 import NewsDetailsCard from "../../components/NewsDetailsCard/news-details-card";
 import NewsCard from "../../components/NewsCard/news-card";
 import newsData from "../../data/news.json";
 import { BellIcon, NextIcon, PrevIcon } from "../../assets/icons";
+import { Typography } from "@mui/material";
+import { useStyles } from "./styles";
+import { Box } from "@mui/system";
 
 const NewsDetails = () => {
+  const classes = useStyles();
   const renderNewsDetailsImage = (img: string) =>
     ({
       news__image: newsDetails,
     }[img]);
 
   return (
-    <div className={classes.news__details}>
-      <div className={classes.header}>
+    <div className={classes.newsDetails}>
+      <Box className={classes.header}>
         <BellIcon />
-        <h4>Новости</h4>
-      </div>
-      <div className={classes.news__detail__info}>
+        <Typography variant='h3'>Новости</Typography>
+      </Box>
+      <div className={classes.newsDetailInfo}>
         {newsDetailsCardData.map((i) => (
           <NewsDetailsCard
             id={i.id}
@@ -30,15 +32,15 @@ const NewsDetails = () => {
         ))}
       </div>
 
-      <div className={classes.news__card__container}>
-        <div className={classes.header}>
-          <h4>Другие новости</h4>
-          <div className={classes.icon__container}>
+      <div className={classes.newsCardContainer}>
+        <Box className={classes.cardHeader}>
+          <Typography variant='h3'>Другие новости</Typography>
+          <Box className={classes.iconContainer}>
             <PrevIcon />
             <NextIcon />
-          </div>
-        </div>
-        <div className={classes.some__news}>
+          </Box>
+        </Box>
+        <div className={classes.someNews}>
           {newsData.map((i) => (
             <NewsCard id={i.id} header={i.header} summary={i.summary} />
           ))}

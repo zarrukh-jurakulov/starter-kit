@@ -4,6 +4,7 @@ import { HeartWithBackIcon } from "../../assets/icons";
 import productData from "../../data/product-card.json";
 import ProductCard from "../../components/ProductCard/product-card";
 import kidsDressimg from "../../assets/images/dress.png";
+import BaseButton from "../../components/Shared/BaseButton";
 
 const Favourites = () => {
   const renderIcon = (iconName: string) =>

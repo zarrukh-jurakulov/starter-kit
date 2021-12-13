@@ -1,0 +1,84 @@
+.bucket__card {
+  display: flex;
+  align-items: center;
+
+  flex-direction: row;
+  width: 100%;
+  padding: 16px;
+
+  .first__column {
+    display: flex;
+    align-items: center;
+    width: 41%;
+    margin-left: 22px;
+
+    & > input {
+      width: 16px;
+      height: 16px;
+    }
+
+    & > img {
+      width: 112px;
+      height: 112px;
+      border-radius: 15px;
+      margin-left: 20px;
+    }
+
+    .header__price {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 20px;
+
+      .header {
+        color: #0f1530;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .price {
+        color: #ee43b4;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: left;
+      }
+    }
+  }
+
+  .second__column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    flex-direction: row;
+    margin-left: 135px;
+
+    .select__size {
+      width: 170px;
+      height: 40px;
+      border-radius: 165px;
+      background-color: rgba(119, 51, 254, 0.1);
+      color: #7733fe;
+      font-size: 14px;
+      border: none;
+      padding: 0 20px;
+    }
+
+    .amount {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 120px;
+
+      & > p {
+        color: #7733fe;
+        font-size: 23px;
+      }
+    }
+
+    .deleteIcon {
+      margin-right: 60px;
+    }
+  }
+}
